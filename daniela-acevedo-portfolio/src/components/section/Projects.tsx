@@ -8,8 +8,6 @@ import {
   FolderOpen,
   X,
 } from 'lucide-react';
-
-import { socialLinks } from '../../config/socialLinks';
 import './Projects.css';
 
 type FolderColour =
