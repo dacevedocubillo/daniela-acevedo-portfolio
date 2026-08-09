@@ -5,12 +5,19 @@ import { fileURLToPath, URL } from 'node:url'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+
+  base: '/daniela-acevedo-portfolio-one-page/',
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+
   build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+
     // Performance optimizations
     rollupOptions: {
       output: {
@@ -21,13 +28,12 @@ export default defineConfig({
         },
       },
     },
-    // Enable CSS code splitting
+
     cssCodeSplit: true,
-    // Reduce bundle size with esbuild (faster than terser)
     minify: 'esbuild',
     target: 'es2015',
   },
-  // Enable CSS inlining for critical styles
+
   css: {
     devSourcemap: false,
   },
