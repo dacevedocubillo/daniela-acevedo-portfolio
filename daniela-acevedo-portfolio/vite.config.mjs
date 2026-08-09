@@ -13,7 +13,6 @@ export default defineConfig({
     },
   },
 
-
   build: {
     outDir: '../docs',
     emptyOutDir: true,
