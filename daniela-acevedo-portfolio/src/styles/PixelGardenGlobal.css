@@ -1,0 +1,49 @@
+/*
+ * Compatibility file.
+ *
+ * The former Pixel Garden theme applied a green palette and global
+ * `!important` overrides to every section. Those declarations have been
+ * intentionally removed so each component can use its own purple theme.
+ * Keep this file only to avoid breaking older imports.
+ */
+
+:root {
+  --site-text: #513e60;
+  --site-text-soft: #776584;
+  --site-paper: rgba(255, 255, 255, 0.72);
+  --site-paper-strong: rgba(255, 252, 255, 0.94);
+  --site-line: rgba(121, 83, 147, 0.24);
+  --site-shadow: rgba(75, 45, 94, 0.11);
+  --site-green: #795393;
+  --site-forest: #68447f;
+  --site-sage-2: #d6bddf;
+  --site-sage-4: #956aab;
+  --site-orange: #b7799e;
+}
+
+html.dark,
+body.dark,
+.dark,
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  --site-text: #f5ebfc;
+  --site-text-soft: #c9b8d4;
+  --site-paper: rgba(43, 29, 55, 0.86);
+  --site-paper-strong: rgba(32, 22, 42, 0.95);
+  --site-line: rgba(224, 199, 242, 0.2);
+  --site-shadow: rgba(0, 0, 0, 0.28);
+  --site-green: #d8b7e5;
+  --site-forest: #c89bd8;
+  --site-sage-2: #654775;
+  --site-sage-4: #bd8dce;
+  --site-orange: #d39ab8;
+}
+
+main section[id] {
+  scroll-margin-top: 86px;
+}
+
+::selection {
+  color: #fff;
+  background: #795393;
+}
