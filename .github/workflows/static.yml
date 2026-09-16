@@ -23,6 +23,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./daniela-acevedo-portfolio
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -44,7 +48,7 @@ jobs:
       - name: Upload compiled portfolio
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./dist
+          path: ./daniela-acevedo-portfolio/dist
 
       - name: Deploy portfolio
         id: deployment
