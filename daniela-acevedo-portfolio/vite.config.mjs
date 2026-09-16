@@ -5,7 +5,7 @@ import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
   plugins: [react()],
 
-  base: '/daniela-acevedo-portfolio-one-page/',
+  base: '/daniela-acevedo-portfolio/',
 
   resolve: {
     alias: {
