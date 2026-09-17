@@ -35,9 +35,11 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 22
+          cache: npm
+          cache-dependency-path: daniela-acevedo-portfolio/package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build portfolio
         run: npm run build
@@ -48,7 +50,7 @@ jobs:
       - name: Upload compiled portfolio
         uses: actions/upload-pages-artifact@v5
         with:
-          path: ./docs
+          path: ./daniela-acevedo-portfolio/dist
 
       - name: Deploy portfolio
         id: deployment
